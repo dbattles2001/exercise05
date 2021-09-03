@@ -19,12 +19,24 @@ import java.util.Scanner;
 public class solution05 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int num1, num2;
+        int num1 = 0 , num2 = 0, i = 1;
 
-        System.out.println("Let's talk numbers. Which one would you like?");
-        num1 = input.nextInt();
-        System.out.println("Give me another!");
-        num2 = input.nextInt();
+        while(i == 1)
+        {
+            System.out.println("Let's talk numbers. Which one would you like?");
+            num1 = input.nextInt();
+            System.out.println("Give me another!");
+            num2 = input.nextInt();
+            if(num1 < 0 || num2 < 0)
+            {
+                System.out.println("Please don't insert any negative numbers.");
+            }
+            else
+            {
+                i = 0;
+            }
+        }
+
         System.out.println("Alright, let's crunch these numbers:");
         int add = (num1 + num2);
         System.out.println(num1 + " + " + num2 + " = " + add);
